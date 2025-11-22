@@ -4,9 +4,6 @@ from .routers import router
 from fastapi.middleware.cors import CORSMiddleware
 
 origins = [
-    "http://localhost",
-    "http://localhost:8000",
-    "http://localhost:3000",
     "https://almera.es",
     "https://www.almera.es",
     "https://api.almera.es",
