@@ -1,0 +1,27 @@
+from fastapi import FastAPI
+from .db import db, Base
+from .routers import router
+from fastapi.middleware.cors import CORSMiddleware
+
+origins = [
+    "http://localhost",
+    "http://localhost:8000",
+    "http://localhost:3000",
+    "https://your-frontend-domain.com",  # Replace with your frontend domain
+]
+
+app = FastAPI(title="Almera URL Shortener Service")
+
+app.add_middleware(
+    CORSMiddleware,
+    allow_origins=origins,
+    allow_credentials=True,
+    allow_methods=["*"],
+    allow_headers=["*"],
+)
+
+# Create tables
+Base.metadata.create_all(bind=db.engine)
+
+# register routers
+app.include_router(router)
