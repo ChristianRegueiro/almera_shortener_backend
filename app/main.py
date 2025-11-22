@@ -7,7 +7,7 @@ origins = [
     "http://localhost",
     "http://localhost:8000",
     "http://localhost:3000",
-    "https://your-frontend-domain.com",  # Replace with your frontend domain
+    "https://almera.es",  # Replace with your frontend domain
 ]
 
 app = FastAPI(title="Almera URL Shortener Service")
