@@ -7,7 +7,7 @@ origins = [
     "http://localhost",
     "http://localhost:8000",
     "http://localhost:3000",
-    "https://almera.es",  # Replace with your frontend domain
+    "https://almera.es",
     "https://www.almera.es",
     "https://api.almera.es",
 ]

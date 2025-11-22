@@ -11,7 +11,7 @@ class Database:
         )
 
 
-Base = declarative_base()  # this is needed for models to inherit from
+Base = declarative_base()
 
 db = Database()
 
